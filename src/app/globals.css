@@ -46,8 +46,7 @@
 @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .animate-pulse-alt{animation:pulse-alt 1s ease-in-out infinite;}
 .animate-spin{animation:spin 1s linear infinite;}
-.animate-duration-10000{animation-duration:10000ms;}
+.animate-duration-5000{animation-duration:5000ms;}
 .place-items-center{place-items:center;}
-.bg-dark{--un-bg-opacity:1;background-color:rgba(34,34,34,var(--un-bg-opacity));}
 .text-\[30vmax\]{font-size:30vmax;}
-.text-emerald{--un-text-opacity:1;color:rgba(52,211,153,var(--un-text-opacity));}
+.g-tr-600{background:linear-gradient(45deg, #3045C9 0%, #65BEDA 45.31%, #9AD37F 100%);}
