@@ -7,10 +7,10 @@ export default function Home() {
 				<div className="grid place-items-center py-24 lt-md:px-12">
 					<form className="max-w-3xl">
 						<h1 className="text-h-xl mb-6">
-							Start tracking,
+							Start tracking your
 							<span className="g-tr-600 bg-clip-text text-transparent font-bold">
 								{" "}
-								imedietly.
+								progress.
 							</span>
 						</h1>
 

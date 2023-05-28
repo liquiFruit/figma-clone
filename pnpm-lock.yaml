@@ -10,6 +10,9 @@ dependencies:
   '@types/react-dom':
     specifier: 18.2.4
     version: 18.2.4
+  '@unocss/postcss':
+    specifier: ^0.52.4
+    version: 0.52.4(postcss@8.4.24)
   eslint:
     specifier: 8.41.0
     version: 8.41.0
@@ -19,6 +22,9 @@ dependencies:
   next:
     specifier: 13.4.4
     version: 13.4.4(react-dom@18.2.0)(react@18.2.0)
+  postcss:
+    specifier: ^8.4.24
+    version: 8.4.24
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -30,7 +36,7 @@ dependencies:
     version: 5.0.4
   unocss:
     specifier: ^0.52.3
-    version: 0.52.3(postcss@8.4.23)(vite@4.3.9)
+    version: 0.52.3(postcss@8.4.24)(vite@4.3.9)
 
 packages:
 
@@ -655,8 +661,20 @@ packages:
       unconfig: 0.3.9
     dev: false
 
+  /@unocss/config@0.52.4:
+    resolution: {integrity: sha512-Yn87KQ4ctFXY36pgKJIimlhjqdx5gjKorVyrA4rzmsEV0Mwtt3+SQoB5tSFdGb4/VWKjymlBXfbNso89oTRY1g==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.52.4
+      unconfig: 0.3.9
+    dev: false
+
   /@unocss/core@0.52.3:
     resolution: {integrity: sha512-AdpksuSj1+jAjF7Ek1Ubtt+pE/bi4EmVqz/sx7PTgp9RUyBX1457kDlSWJPFOvEEkKL8VLtwXB46hD2oPAp36Q==}
+    dev: false
+
+  /@unocss/core@0.52.4:
+    resolution: {integrity: sha512-pST/IqzgV05BdIJU/oZ4F6wN6wotYbOGGnuYohanq0qHy/gflCicR7PkGIzZNGerHf0FaRnM7OOEzsPGxe7BMg==}
     dev: false
 
   /@unocss/extractor-arbitrary-variants@0.52.3:
@@ -672,7 +690,7 @@ packages:
       sirv: 2.0.3
     dev: false
 
-  /@unocss/postcss@0.52.3(postcss@8.4.23):
+  /@unocss/postcss@0.52.3(postcss@8.4.24):
     resolution: {integrity: sha512-n3SdpSsn0MpWB9Pf6JjzR7U2rsA6jkD5QPJttIL9yxrK9i4KXTwGNio/4iM2Rs4x+qAzLtNjIBJ1xdxtIFA3kA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -683,7 +701,21 @@ packages:
       css-tree: 2.3.1
       fast-glob: 3.2.12
       magic-string: 0.30.0
-      postcss: 8.4.23
+      postcss: 8.4.24
+    dev: false
+
+  /@unocss/postcss@0.52.4(postcss@8.4.24):
+    resolution: {integrity: sha512-czgtSpVoGloYLigWL9y4FfEqq6MLDE0M89GWx5L2wbwaR5jgTYvCus0r23dUxqbDRidAJ2zXD+QFCh3Gk0wvoQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      postcss: ^8.4.21
+    dependencies:
+      '@unocss/config': 0.52.4
+      '@unocss/core': 0.52.4
+      css-tree: 2.3.1
+      fast-glob: 3.2.12
+      magic-string: 0.30.0
+      postcss: 8.4.24
     dev: false
 
   /@unocss/preset-attributify@0.52.3:
@@ -2544,8 +2576,8 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /postcss@8.4.23:
-    resolution: {integrity: sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==}
+  /postcss@8.4.24:
+    resolution: {integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.6
@@ -2961,7 +2993,7 @@ packages:
       jiti: 1.18.2
     dev: false
 
-  /unocss@0.52.3(postcss@8.4.23)(vite@4.3.9):
+  /unocss@0.52.3(postcss@8.4.24)(vite@4.3.9):
     resolution: {integrity: sha512-BgL3kbxwt839t0ojo/j+i8xU4qu+fyV34SJOMQuFhLu6xkPNepvr6uPeipzNDajR7EZP3Q+jXJT9AWLKLLg1jw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2974,7 +3006,7 @@ packages:
       '@unocss/cli': 0.52.3
       '@unocss/core': 0.52.3
       '@unocss/extractor-arbitrary-variants': 0.52.3
-      '@unocss/postcss': 0.52.3(postcss@8.4.23)
+      '@unocss/postcss': 0.52.3(postcss@8.4.24)
       '@unocss/preset-attributify': 0.52.3
       '@unocss/preset-icons': 0.52.3
       '@unocss/preset-mini': 0.52.3
@@ -3035,7 +3067,7 @@ packages:
     dependencies:
       '@types/node': 20.2.4
       esbuild: 0.17.19
-      postcss: 8.4.23
+      postcss: 8.4.24
       rollup: 3.23.0
     optionalDependencies:
       fsevents: 2.3.2

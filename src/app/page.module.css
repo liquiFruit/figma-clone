@@ -1,0 +1,3 @@
+.test {
+	@apply hover:(bg-green-500 scale-150);
+}
