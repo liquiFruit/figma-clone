@@ -18,13 +18,15 @@ export default defineConfig({
         const newTheme = {
             ...theme,
             colors: {
+                transparent: "transparent",
+                light: "hsl(0, 0%, 97%)",
                 dark: {
                     100: "rgb(232, 233, 233)",
                     200: "rgb(205, 206, 207)",
                     300: "rgb(155, 156, 158)",
                     400: "rgb(104, 107, 110)",
                     500: "rgb(54, 58, 61)",
-                    600: "rgb(15, 17, 26)",
+                    600: "hsl(214, 12%, 12%)",
                     700: "rgb(19, 22, 25)",
                     800: "rgb(13, 15, 16)",
                     900: "rgb(6, 7, 8)"
@@ -123,6 +125,10 @@ export default defineConfig({
         ["text-b-lg", "text-4 leading-6 text-b-base"],
         ["text-b-md", "text-3.5 leading-5 text-b-base"],
         ["text-b-sm", "text-3 leading-4.5 text-b-base"],
+
+
+        ["i-email", "i-uil-envelope"],
+        ["i-lock", "i-uil-lock-alt"],
     ],
     rules: [
         /*
@@ -138,22 +144,22 @@ export default defineConfig({
         */
 
         ["g-bl-600", {
-            background: "linear-gradient(225deg, #3045C9 0%, #65BEDA 45.31%, #9AD37F 100%)"
+            "background-image": "linear-gradient(225deg, #3045C9 0%, #65BEDA 45.31%, #9AD37F 100%)"
         }],
         ["g-tr-600", {
-            background: "linear-gradient(45deg, #3045C9 0%, #65BEDA 45.31%, #9AD37F 100%)"
+            "background-image": "linear-gradient(45deg, #3045C9 0%, #65BEDA 45.31%, #9AD37F 100%)"
         }],
         ["g-bl-500", {
-            background: "linear-gradient(225deg, #4D62E5 0%, #87DDEE 45.31%, #B6F09C 100%)"
+            "background-image": "linear-gradient(225deg, #4D62E5 0%, #87DDEE 45.31%, #B6F09C 100%)"
         }],
         ["g-tr-500", {
-            background: "linear-gradient(45deg, #4D62E5 0%, #87DDEE 45.31%, #B6F09C 100%)"
-        }],
-        ["g-s-tr-500", {
-            background: "linear-gradient(225deg, #82DBF7 0%, #B6F09C 100%)"
+            "background-image": "linear-gradient(45deg, #4D62E5 0%, #87DDEE 45.31%, #B6F09C 100%)"
         }],
         ["g-s-bl-500", {
-            background: "linear-gradient(45deg, #82DBF7 0%, #B6F09C 100%)"
+            "background-image": "linear-gradient(225deg, #82DBF7 0%, #B6F09C 100%)"
+        }],
+        ["g-s-tr-500", {
+            "background-image": "linear-gradient(45deg, #82DBF7 0%, #B6F09C 100%)"
         }],
     ]
 })
