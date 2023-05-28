@@ -1,0 +1,5 @@
+@unocss;
+
+* {
+	@apply font-sans text-light;
+}

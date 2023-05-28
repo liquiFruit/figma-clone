@@ -1,9 +1,8 @@
 import "@unocss/reset/tailwind.css";
-import "./globals.css";
+import "@/styles/main.css";
 
 export const metadata = {
-	title: "/\\",
-	description: "Next.js 13.4",
+	title: "_",
 };
 
 export default function RootLayout({

@@ -115,6 +115,9 @@ export default defineConfig({
         return newTheme
     },
     shortcuts: [
+        ["b-glass", "border-t border-light/10 -mt-0.25"],
+        ["glass", " g-glass b-glass"],
+
         ["text-h-xl", "text-9 leading-11"],
         ["text-h-lg", "text-8 leading-10"],
         ["text-h-md", "text-7 leading-9"],
@@ -130,6 +133,10 @@ export default defineConfig({
 
         ["i-email", "i-uil-envelope"],
         ["i-lock", "i-uil-lock-alt"],
+        ["i-arrow-down", "i-uil-angle-down"],
+        ["i-search", "i-uil-search"],
+        ["i-add", "i-uil-plus-circle"],
+        ["i-settings", "i-uil-setting"]
     ],
     rules: [
         /*
@@ -161,6 +168,10 @@ export default defineConfig({
         }],
         ["g-s-tr-500", {
             "background-image": "linear-gradient(45deg, #82DBF7 0%, #B6F09C 100%)"
+        }],
+
+        ["g-glass", {
+            "background-image": "linear-gradient(117.58deg, rgba(215, 237, 237, 0.16) -47.79%, rgba(204, 235, 235, 0) 100%)",
         }],
     ]
 })

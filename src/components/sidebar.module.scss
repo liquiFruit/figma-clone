@@ -1,0 +1,12 @@
+.flexBtn {
+	@apply flex flex-row gap-4 items-center 
+		rounded-2 p-4
+		hover:(glass)
+		text-b-md font-bold;
+
+	& > .i {
+		@apply outline 
+			w-4 h-4 aspect-square
+			rounded-1;
+	}
+}

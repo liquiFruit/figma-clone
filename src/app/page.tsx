@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -50,9 +51,11 @@ export default function Home() {
 							</p>
 						</div>
 
-						<div className="hover:scale-105 cursor-pointer transition-all bg-green-500 text-blue-900 text-center rounded-3 text-b-lg font-semibold py-3">
-							Log in
-						</div>
+						<Link href={"/dashboard"}>
+							<div className="w-full hover:scale-105 cursor-pointer transition-all bg-green-500 text-blue-900 text-center rounded-3 text-b-lg font-semibold py-3">
+								Log in
+							</div>
+						</Link>
 					</form>
 				</div>
 				<div className="grow-1 relative">
