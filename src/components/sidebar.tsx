@@ -7,7 +7,7 @@ import styles from "./sidebar.module.scss";
 
 const Sidebar: React.FC = () => {
 	return (
-		<div className="bg-dark-800 rounded-5 flex flex-col w-xs grow">
+		<div className="bg-dark-800 rounded-5 flex flex-col w-xs">
 			{/* Organisation */}
 			<div className="flex flex-row items-center p-6 gap-4">
 				<Image

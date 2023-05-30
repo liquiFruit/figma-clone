@@ -1,7 +1,9 @@
 import { defineConfig, presetIcons, presetWebFonts, presetUno, ConfigBase, transformerVariantGroup, transformerDirectives } from "unocss"
 
 export default defineConfig({
-    transformers: [transformerVariantGroup(), transformerDirectives()],
+    transformers: [transformerVariantGroup({
+        separators: [":"]
+    }), transformerDirectives()],
     presets: [
         presetUno(),
         presetIcons({
@@ -100,9 +102,15 @@ export default defineConfig({
                 },
 
                 success: {
-                    100: "hsl(150, 50%, 97%)",
-                    500: "hsl(145, 54%, 54%)",
-                    900: "hsl(146, 41%, 12%)"
+                    100: "#dbf4e5",
+                    200: "#b7e9cc",
+                    300: "#92dfb2",
+                    400: "#6ed499",
+                    500: "HSL(145, 54%, 54%)",
+                    600: "#3ba166",
+                    700: "#2c794c",
+                    800: "#1e5033",
+                    900: "#0f2819"
                 },
 
                 error: {
@@ -139,17 +147,16 @@ export default defineConfig({
         ["i-settings", "i-uil-setting"]
     ],
     rules: [
-        /*
-        Example of regex shortcut:
-        [/^bg-radial-(\w+)/, ([, w], { rawSelector, currentSelector, theme, variants }) => {
-            if (!w) return ""
+        [/^glow-(\w+)-([a-z]+)-(\d+)(\/(\d+))?$/, ([, size, col, val, _, opacity], { rawSelector, currentSelector, theme, variants }) => {
+            const sizes = new Map<string, string>([["sm", "0.25rem"], ["md", "0.5rem"], ["lg", "1rem"], ["xl", "5rem"]])
 
-            return `` +
-            `${/\bhover:/.test(rawSelector) ? '.hover\\:' : '.'}` +
-            `${currentSelector}${/\bhover:/.test(rawSelector) ? ':hover' : ''}` +
-            `{ background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%, ${theme.colors[w]}10);}`
+            let color: string = theme.colors[col][val]
+            color = "hsla" + color.slice(3, -1) + `, ${opacity || 100}%)`
+            return {
+                "--uno-glow-size": "1rem",
+                "box-shadow": `inset 0 0 ${sizes.get(size) || "var(--uno-glow-size)"} 0 ${color}`
+            }
         }],
-        */
 
         ["g-bl-600", {
             "background-image": "linear-gradient(225deg, #3045C9 0%, #65BEDA 45.31%, #9AD37F 100%)"
